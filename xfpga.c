@@ -471,7 +471,7 @@ static ssize_t fpga_io_read(struct file *filp, char __user *buf, size_t count, l
         return -EFAULT;
     }
 
-    return count;
+    return (ssize_t)count;
 }
 
 /**
@@ -518,7 +518,7 @@ static ssize_t fpga_io_write(struct file *filp, const char __user *buf, size_t c
 
     spin_unlock_irqrestore(&dev_data->lock, flags);
 
-    return count;
+    return (ssize_t)count;
 }
 
 /**
@@ -528,7 +528,7 @@ static unsigned int fpga_io_poll(struct file *filp, poll_table *wait)
 {
     struct fpga_file_data_t *file_data = (struct fpga_file_data_t *)(filp->private_data);
     struct fpga_dev_data_t *dev_data = file_data->dev_data;
-    int mask;
+    unsigned int mask;
 
     if (!dev_data->irq)
     {
