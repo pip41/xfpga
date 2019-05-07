@@ -32,8 +32,6 @@
 #define FPGA_IO_PHYS_SIZE       (0x10000ULL)
 
 #define GPIO_BASE               (480)
-
-#define FPGA_CS                 (7)
 #define FPGA_PROG_N_GPIO        (GPIO_BASE + 2)
 #define FPGA_INIT_N_GPIO        (GPIO_BASE + 11)
 #define FPGA_DONE_N_GPIO        (GPIO_BASE + 3)
