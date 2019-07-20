@@ -3,7 +3,8 @@
  * @author: ppatel
  *
  * @brief:  Xilinx FPGA Configuration and I/O Driver
- *
+ *          Tested with Octeon III CN7010X SoC and Xilinx Aria 7 FPGA wired through the 8-bit bootbus on Octeon Linux 5.1
+ *          Todo: Retrieve GPIOs, CS and physical address through device-tree; update to use GPIO descriptor structure
  */
 
 #include <linux/kernel.h>
