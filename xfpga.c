@@ -39,7 +39,6 @@
 #define FPGA_IRQ_N_GPIO         (GPIO_BASE + 12)
 #define FPGA_RESET_N_GPIO       (GPIO_BASE + 4)
 
-MODULE_AUTHOR("Parag Patel");
 MODULE_DESCRIPTION("Xilinx FPGA config and I/O");
 MODULE_LICENSE("GPL");
 
